@@ -2,3 +2,5 @@ dash
 gunicorn
 jupyterlab
 prisma
+dash-mantine-components
+dash-iconify

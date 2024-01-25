@@ -3,7 +3,7 @@
 
 docker rm -vf $(docker ps -aq)
 
-docker run -it --name dev dash bash
+docker run -it -v $HOME/baylek:/baylek  -p 8050:8050 --name dev dash bash
 
 
 
