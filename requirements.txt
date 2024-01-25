@@ -4,3 +4,4 @@ jupyterlab
 prisma
 dash-mantine-components
 dash-iconify
+pandas

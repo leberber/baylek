@@ -1,2 +1,6 @@
 .env
 **/__pycache__/
+**/migrations/
+**/.Ds_Store/
+**/.ipynb_checkpoints/
+**/.Trash-0/

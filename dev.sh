@@ -3,7 +3,7 @@
 
 docker rm -vf $(docker ps -aq)
 
-docker run -it -v $HOME/baylek:/baylek  -p 8050:8050 --name dev dash bash
+docker run -it  --env DATABASE_URL=$DATABASE_URL -v $HOME/baylek:/baylek -p 8050:8050 -p 8888:8888  --name dev dash bash
 
 
 

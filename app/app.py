@@ -6,6 +6,22 @@ import dash_mantine_components as dmc
 import pprint
 from appshell import header
 from utils import id_dict
+from pydantic import BaseModel
+from prisma import Prisma
+import os 
+
+
+db = Prisma(
+        datasource={
+            'url': os.environ.get('DATABASE_URL'),
+        }
+    )
+db.connect()
+
+posts = db.doctors.find_many()
+
+db.disconnect()
+print(posts)
 # import pandas as pd
 # from pages.shop import  shop
 

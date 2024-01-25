@@ -7,3 +7,8 @@
 
 ### find if a port is being used
 ```netstat -ano | grep 443```
+
+
+### what extentions to install in vs code 
+    1. python 
+    2. prisma

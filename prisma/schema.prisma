@@ -9,9 +9,14 @@ generator client {
   interface            = "sync"
 }
 
-model Post {
+model Doctors {
   id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
+  nom	String
+  genre	String
+  specialite	String
+  address_dsp	String
+  daira	String
+  telephone	String
+  lat	String
+  lng String
 }
