@@ -3,7 +3,7 @@
 
 docker rm -vf $(docker ps -aq)
 
-docker run -it -p 5432:5432 --name dev dash bash
+docker run -it --name dev dash bash
 
 
 

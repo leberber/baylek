@@ -1,1 +1,1 @@
-pip install prisma
+#### prisma migrate dev --name "init"
