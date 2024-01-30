@@ -1,7 +1,7 @@
 dash
 gunicorn
 jupyterlab
-prisma
 dash-mantine-components
 dash-iconify
 pandas
+"psycopg[binary,pool]"
