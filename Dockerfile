@@ -12,4 +12,4 @@ COPY . .
 
 RUN pip3 install -r requirements.txt
 
-CMD gunicorn --bind 0.0.0.0:443 app.app:server --certfile=/fullchain.pem --keyfile=/privkey.pem
+CMD gunicorn --bind 0.0.0.0:443 --chdir app app:server --certfile=/fullchain.pem --keyfile=/privkey.pem
