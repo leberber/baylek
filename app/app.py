@@ -6,22 +6,11 @@ import dash_mantine_components as dmc
 import pprint
 from appshell import header
 from utils import id_dict
-from pydantic import BaseModel
-from prisma import Prisma
 import os 
 
 
-db = Prisma(
-        datasource={
-            'url': os.environ.get('DATABASE_URL'),
-        }
-    )
-db.connect()
 
-posts = db.doctors.find_many()
 
-db.disconnect()
-print(posts)
 # import pandas as pd
 # from pages.shop import  shop
 
@@ -40,23 +29,31 @@ server = app.server
 # print(data)
 
 # print(pprint.pformat(dmc.Group().to_plotly_json() ))
-
-
-
-
-
- 
+# print(dmc.theme.DEFAULT_COLORS)
+# style = {
+#     "height": '100vh',
+#     "border": f"10px solid {dmc.theme.DEFAULT_COLORS['dark'][1]}",
+#     "marginTop": 0,
+# }
 
 app.layout = html.Div(
     children=[  
         dmc.MantineProvider(
             id = 'theme',
+            
             withGlobalStyles=True,
             children=[
-                html.Div(
+                dmc.Container(
+                    style={
+                        "height": '100vh',
+                        "border": f"1px solid blue",
+                        "marginTop": 0,
+                    },
+                    size = 2000,
                     children = [
+                   
                         header,
-       
+                        dmc.Text("Lorem velit ex excepteur enim dolor commodo labore ullamco adipisicing non officia sit.", size = '1em'),
                     ]
                 )
             ]
