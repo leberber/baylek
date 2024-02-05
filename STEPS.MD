@@ -1,0 +1,4 @@
+1) RUN DOCKER ON MAC-OS
+2) START THE DEV CONTAINER
+3) ATTACH THE DEV CONTAINER
+    <!-- box-shadow: 0px 0px 63px 0px rgba(67,75,169,.2); -->
